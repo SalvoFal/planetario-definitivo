@@ -101,5 +101,12 @@ namespace planetario_definitivo
             listBox1.Items.Remove(listBox1.SelectedItem);
      
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            btnStart.Hide();
+            lblStart.Hide();
+        }
+
     }
 }

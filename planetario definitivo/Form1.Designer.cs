@@ -41,6 +41,8 @@
             this.txtMassa = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cmbColore = new System.Windows.Forms.ComboBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.lblStart = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -48,7 +50,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(16, 30);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(159, 116);
             this.listBox1.TabIndex = 0;
@@ -100,7 +102,7 @@
             // btnAggiungi
             // 
             this.btnAggiungi.Location = new System.Drawing.Point(511, 62);
-            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(4);
             this.btnAggiungi.Name = "btnAggiungi";
             this.btnAggiungi.Size = new System.Drawing.Size(100, 28);
             this.btnAggiungi.TabIndex = 5;
@@ -111,7 +113,7 @@
             // btnRimuovi
             // 
             this.btnRimuovi.Location = new System.Drawing.Point(511, 96);
-            this.btnRimuovi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRimuovi.Margin = new System.Windows.Forms.Padding(4);
             this.btnRimuovi.Name = "btnRimuovi";
             this.btnRimuovi.Size = new System.Drawing.Size(100, 28);
             this.btnRimuovi.TabIndex = 6;
@@ -122,7 +124,7 @@
             // btnPlay
             // 
             this.btnPlay.Location = new System.Drawing.Point(511, 132);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(100, 28);
             this.btnPlay.TabIndex = 7;
@@ -133,7 +135,7 @@
             // txtVelocita
             // 
             this.txtVelocita.Location = new System.Drawing.Point(320, 30);
-            this.txtVelocita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVelocita.Margin = new System.Windows.Forms.Padding(4);
             this.txtVelocita.Name = "txtVelocita";
             this.txtVelocita.Size = new System.Drawing.Size(132, 22);
             this.txtVelocita.TabIndex = 8;
@@ -141,7 +143,7 @@
             // txtSpostamento
             // 
             this.txtSpostamento.Location = new System.Drawing.Point(320, 62);
-            this.txtSpostamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSpostamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtSpostamento.Name = "txtSpostamento";
             this.txtSpostamento.Size = new System.Drawing.Size(132, 22);
             this.txtSpostamento.TabIndex = 9;
@@ -149,7 +151,7 @@
             // txtMassa
             // 
             this.txtMassa.Location = new System.Drawing.Point(320, 94);
-            this.txtMassa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMassa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMassa.Name = "txtMassa";
             this.txtMassa.Size = new System.Drawing.Size(132, 22);
             this.txtMassa.TabIndex = 10;
@@ -157,7 +159,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(320, 126);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(132, 22);
             this.txtNome.TabIndex = 11;
@@ -174,16 +176,43 @@
             "Bianco",
             "Rosa"});
             this.cmbColore.Location = new System.Drawing.Point(487, 30);
-            this.cmbColore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbColore.Margin = new System.Windows.Forms.Padding(4);
             this.cmbColore.Name = "cmbColore";
             this.cmbColore.Size = new System.Drawing.Size(160, 24);
             this.cmbColore.TabIndex = 12;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.8F);
+            this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnStart.Location = new System.Drawing.Point(0, -2);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(1380, 780);
+            this.btnStart.TabIndex = 13;
+            this.btnStart.Text = "PLANETARIO";
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // lblStart
+            // 
+            this.lblStart.AutoSize = true;
+            this.lblStart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.8F);
+            this.lblStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblStart.Location = new System.Drawing.Point(545, 647);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(308, 59);
+            this.lblStart.TabIndex = 14;
+            this.lblStart.Text = "Click to start";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1515, 801);
+            this.Controls.Add(this.lblStart);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.cmbColore);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtMassa);
@@ -197,7 +226,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -221,6 +250,8 @@
         private System.Windows.Forms.TextBox txtMassa;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ComboBox cmbColore;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label lblStart;
     }
 }
 
