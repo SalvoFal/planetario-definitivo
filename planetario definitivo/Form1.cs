@@ -67,14 +67,11 @@ namespace planetario_definitivo
             {
                 b = new SolidBrush(Color.Pink);
             }
-
-                s[contatore - 1] = Vettore.Parse(txtSpostamento.Text);
-                v[contatore - 1] = Vettore.Parse(txtVelocita.Text);
-                n[contatore - 1] = txtNome.Text;
-                m[contatore - 1] = double.Parse(txtMassa.Text);
-                c[contatore - 1] = cmbColore.SelectedIndex;
-
-
+            s[contatore - 1] = Vettore.Parse(txtSpostamento.Text);
+            v[contatore - 1] = Vettore.Parse(txtVelocita.Text);
+            n[contatore - 1] = txtNome.Text;
+            m[contatore - 1] = double.Parse(txtMassa.Text);
+            c[contatore - 1] = cmbColore.SelectedIndex;
             Pianeti p1 = new Pianeti(massa, spostamento, velocita, b, nome);
             listBox1.Items.Add(nome);
         }
