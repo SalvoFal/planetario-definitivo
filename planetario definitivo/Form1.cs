@@ -27,11 +27,6 @@ namespace planetario_definitivo
 
         }
         int contatore = 0;
-        Vettore[] s = new Vettore[10000000];
-        Vettore[] v = new Vettore[10000000];
-        string[] n = new string[10000000];
-        double[] m = new double[10000000];
-        int[] c = new int[10000000];
         Pianeti[] p = new Pianeti[10000000];
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
@@ -69,11 +64,6 @@ namespace planetario_definitivo
             {
                 b = new SolidBrush(Color.Pink);
             }
-            s[contatore - 1] = Vettore.Parse(txtSpostamento.Text);
-            v[contatore - 1] = Vettore.Parse(txtVelocita.Text);
-            n[contatore - 1] = txtNome.Text;
-            m[contatore - 1] = double.Parse(txtMassa.Text);
-            c[contatore - 1] = cmbColore.SelectedIndex;
             p[contatore - 1] = new Pianeti(massa, spostamento, velocita, b, nome);
             listBox1.Items.Add(nome);
         }
