@@ -42,19 +42,19 @@ namespace planetario_definitivo
             {
                 b = new SolidBrush(Color.Yellow);
             }
-            else if (cmbColore.SelectedIndex == 1)
+            else if (cmbColore.SelectedIndex == 2)
             {
                 b = new SolidBrush(Color.Red);
             }
-            else if (cmbColore.SelectedIndex == 1)
+            else if (cmbColore.SelectedIndex == 3)
             {
                 b = new SolidBrush(Color.Green);
             }
-            else if (cmbColore.SelectedIndex == 1)
+            else if (cmbColore.SelectedIndex == 4)
             {
                 b = new SolidBrush(Color.Orange);
             }
-            else if (cmbColore.SelectedIndex == 1)
+            else if (cmbColore.SelectedIndex == 5)
             {
                 b = new SolidBrush(Color.White);
             }
