@@ -46,18 +46,21 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 24);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(16, 30);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.Size = new System.Drawing.Size(159, 116);
             this.listBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(151, 24);
+            this.label1.Location = new System.Drawing.Point(201, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Velocita";
             // 
@@ -65,9 +68,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(151, 49);
+            this.label2.Location = new System.Drawing.Point(201, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Spostamento";
             // 
@@ -75,9 +79,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(151, 78);
+            this.label3.Location = new System.Drawing.Point(201, 96);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Massa";
             // 
@@ -85,17 +90,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(151, 106);
+            this.label4.Location = new System.Drawing.Point(201, 130);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Nome";
             // 
             // btnAggiungi
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(383, 50);
+            this.btnAggiungi.Location = new System.Drawing.Point(511, 62);
+            this.btnAggiungi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAggiungi.Name = "btnAggiungi";
-            this.btnAggiungi.Size = new System.Drawing.Size(75, 23);
+            this.btnAggiungi.Size = new System.Drawing.Size(100, 28);
             this.btnAggiungi.TabIndex = 5;
             this.btnAggiungi.Text = "Aggiungi";
             this.btnAggiungi.UseVisualStyleBackColor = true;
@@ -103,18 +110,21 @@
             // 
             // btnRimuovi
             // 
-            this.btnRimuovi.Location = new System.Drawing.Point(383, 78);
+            this.btnRimuovi.Location = new System.Drawing.Point(511, 96);
+            this.btnRimuovi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRimuovi.Name = "btnRimuovi";
-            this.btnRimuovi.Size = new System.Drawing.Size(75, 23);
+            this.btnRimuovi.Size = new System.Drawing.Size(100, 28);
             this.btnRimuovi.TabIndex = 6;
             this.btnRimuovi.Text = "Rimuovi";
             this.btnRimuovi.UseVisualStyleBackColor = true;
+            this.btnRimuovi.Click += new System.EventHandler(this.btnRimuovi_Click);
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(383, 107);
+            this.btnPlay.Location = new System.Drawing.Point(511, 132);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(75, 23);
+            this.btnPlay.Size = new System.Drawing.Size(100, 28);
             this.btnPlay.TabIndex = 7;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = true;
@@ -122,30 +132,34 @@
             // 
             // txtVelocita
             // 
-            this.txtVelocita.Location = new System.Drawing.Point(240, 24);
+            this.txtVelocita.Location = new System.Drawing.Point(320, 30);
+            this.txtVelocita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVelocita.Name = "txtVelocita";
-            this.txtVelocita.Size = new System.Drawing.Size(100, 20);
+            this.txtVelocita.Size = new System.Drawing.Size(132, 22);
             this.txtVelocita.TabIndex = 8;
             // 
             // txtSpostamento
             // 
-            this.txtSpostamento.Location = new System.Drawing.Point(240, 50);
+            this.txtSpostamento.Location = new System.Drawing.Point(320, 62);
+            this.txtSpostamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSpostamento.Name = "txtSpostamento";
-            this.txtSpostamento.Size = new System.Drawing.Size(100, 20);
+            this.txtSpostamento.Size = new System.Drawing.Size(132, 22);
             this.txtSpostamento.TabIndex = 9;
             // 
             // txtMassa
             // 
-            this.txtMassa.Location = new System.Drawing.Point(240, 76);
+            this.txtMassa.Location = new System.Drawing.Point(320, 94);
+            this.txtMassa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMassa.Name = "txtMassa";
-            this.txtMassa.Size = new System.Drawing.Size(100, 20);
+            this.txtMassa.Size = new System.Drawing.Size(132, 22);
             this.txtMassa.TabIndex = 10;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(240, 102);
+            this.txtNome.Location = new System.Drawing.Point(320, 126);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(132, 22);
             this.txtNome.TabIndex = 11;
             // 
             // cmbColore
@@ -159,16 +173,17 @@
             "Arancione",
             "Bianco",
             "Rosa"});
-            this.cmbColore.Location = new System.Drawing.Point(365, 24);
+            this.cmbColore.Location = new System.Drawing.Point(487, 30);
+            this.cmbColore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbColore.Name = "cmbColore";
-            this.cmbColore.Size = new System.Drawing.Size(121, 21);
+            this.cmbColore.Size = new System.Drawing.Size(160, 24);
             this.cmbColore.TabIndex = 12;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 651);
+            this.ClientSize = new System.Drawing.Size(1515, 801);
             this.Controls.Add(this.cmbColore);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtMassa);
@@ -182,6 +197,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

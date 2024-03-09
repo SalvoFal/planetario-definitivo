@@ -60,12 +60,22 @@ namespace planetario_definitivo
             {
                 b = new SolidBrush(Color.White);
             }
-            else
+            else if (cmbColore.SelectedIndex == 6)
             {
                 b = new SolidBrush(Color.Pink);
             }
+            else
+            {
+                MessageBox.Show("Inserire un colore!!!");
+                return;
+            }
             p[contatore - 1] = new Pianeti(massa, spostamento, velocita, b, nome);
             listBox1.Items.Add(nome);
+            txtMassa.Clear();
+            txtSpostamento.Clear();
+            txtVelocita.Clear();
+            txtNome.Clear();
+            cmbColore.SelectedIndex = -1;
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -84,6 +94,12 @@ namespace planetario_definitivo
             btnRimuovi.Hide();
             cmbColore.Hide();
             
+        }
+
+        private void btnRimuovi_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Remove(listBox1.SelectedItem);
+     
         }
     }
 }
