@@ -25,15 +25,20 @@ namespace planetario_definitivo
             this.BackColor = Color.Black;
 
         }
-
+        int contatore = 0;
+        Vettore[] s = new Vettore[10000000];
+        Vettore[] v = new Vettore[10000000];
+        string[] n = new string[10000000];
+        double[] m = new double[10000000];
+        int[] c = new int[10000000];
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
+            contatore++;
             Vettore spostamento = Vettore.Parse(txtSpostamento.Text);
             Vettore velocita = Vettore.Parse(txtVelocita.Text);
             string nome = txtNome.Text;
             double massa = double.Parse(txtMassa.Text);
             SolidBrush b = new SolidBrush(Color.Black);
-
             if (cmbColore.SelectedIndex == 0)
             {
                 b = new SolidBrush(Color.Blue);
@@ -61,6 +66,14 @@ namespace planetario_definitivo
             else
             {
                 b = new SolidBrush(Color.Pink);
+            }
+            for(contatore = 0; contatore < listBox1.Items.Count + 1; contatore++)
+            {
+                s[contatore - 1] = Vettore.Parse(txtSpostamento.Text);
+                v[contatore - 1] = Vettore.Parse(txtVelocita.Text);
+                n[contatore - 1] = txtNome.Text;
+                m[contatore - 1] = double.Parse(txtMassa.Text);
+                c[contatore - 1] = cmbColore.SelectedIndex;
             }
 
 
