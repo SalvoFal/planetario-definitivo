@@ -8,7 +8,8 @@ namespace Planetario
 {
     internal class Planetario
     {
-        const double G = 5;
+        public double G { get; set; }      
         public List<Pianeti> ListaPianeti { get; set; }
+
     }
 }
