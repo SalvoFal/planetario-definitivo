@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,6 +32,7 @@ namespace planetario_definitivo
         string[] n = new string[10000000];
         double[] m = new double[10000000];
         int[] c = new int[10000000];
+        Pianeti[] p = new Pianeti[10000000];
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
             contatore++;
@@ -72,7 +74,7 @@ namespace planetario_definitivo
             n[contatore - 1] = txtNome.Text;
             m[contatore - 1] = double.Parse(txtMassa.Text);
             c[contatore - 1] = cmbColore.SelectedIndex;
-            Pianeti p1 = new Pianeti(massa, spostamento, velocita, b, nome);
+            p[contatore - 1] = new Pianeti(massa, spostamento, velocita, b, nome);
             listBox1.Items.Add(nome);
         }
 
@@ -91,6 +93,7 @@ namespace planetario_definitivo
             btnPlay.Hide();
             btnRimuovi.Hide();
             cmbColore.Hide();
+            
         }
     }
 }
