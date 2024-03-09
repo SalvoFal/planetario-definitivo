@@ -25,9 +25,13 @@ namespace Planetario
             Nome = nome;
 
         }
-        public void DisegnaPianeti(Graphics g, SolidBrush brush)
+        public void DisegnaPianeti(Graphics g)
         {
-            g.FillEllipse(brush, (float)this.Spostamento.X, (float)this.Spostamento.Y, 7, 7);
+            g.FillEllipse(this.Brush, (float)this.Spostamento.X, (float)this.Spostamento.Y, 7, 7);
+        }
+        public override string ToString()
+        {
+            return string.Format("{0}; {1}; {2}; {3}; {4}", Massa, Spostamento.X, Spostamento.Y, Velocita.X, Velocita.Y);
         }
     }
 }

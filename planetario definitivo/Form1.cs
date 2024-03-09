@@ -20,65 +20,89 @@ namespace planetario_definitivo
             InitializeComponent();
             Graphics g = this.CreateGraphics();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.Black;
+            btnStart.Height = ClientSize.Height; 
+            btnStart.Width = ClientSize.Width;
         }
         int contatore = 0;
         Pianeti[] p = new Pianeti[10000000];
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
             contatore++;
-            Vettore spostamento = Vettore.Parse(txtSpostamento.Text);
-            Vettore velocita = Vettore.Parse(txtVelocita.Text);
-            string nome = txtNome.Text;
-            double massa = double.Parse(txtMassa.Text);
-            SolidBrush b = new SolidBrush(Color.Black);
-            if (cmbColore.SelectedIndex == 0)
+            if (!Vettore.TryParse(txtSpostamento.Text, out Vettore spostamento) == true)
             {
-                b = new SolidBrush(Color.Blue);
-            }
-            else if (cmbColore.SelectedIndex == 1)
-            {
-                b = new SolidBrush(Color.Yellow);
-            }
-            else if (cmbColore.SelectedIndex == 2)
-            {
-                b = new SolidBrush(Color.Red);
-            }
-            else if (cmbColore.SelectedIndex == 3)
-            {
-                b = new SolidBrush(Color.Green);
-            }
-            else if (cmbColore.SelectedIndex == 4)
-            {
-                b = new SolidBrush(Color.Orange);
-            }
-            else if (cmbColore.SelectedIndex == 5)
-            {
-                b = new SolidBrush(Color.White);
-            }
-            else if (cmbColore.SelectedIndex == 6)
-            {
-                b = new SolidBrush(Color.Pink);
+                MessageBox.Show("bisogna inserire un vettore");
             }
             else
             {
-                MessageBox.Show("Inserire un colore!!!");
-                return;
-            }
-            p[contatore - 1] = new Pianeti(massa, spostamento, velocita, b, nome);
-            listBox1.Items.Add(nome);
-            txtMassa.Clear();
-            txtSpostamento.Clear();
-            txtVelocita.Clear();
-            txtNome.Clear();
-            cmbColore.SelectedIndex = -1;
+
+                if (!Vettore.TryParse(txtVelocita.Text, out Vettore velocita) == true)
+                {
+                    MessageBox.Show("bisogna inserire un vettore");
+                }
+                else { 
+                string nome = txtNome.Text;
+                    if (!double.TryParse(txtMassa.Text, out double massa) == true)
+                    {
+                        MessageBox.Show("bisogna inserire un valore numerico");
+                    }
+                    else
+                    {
+
+                        SolidBrush b = new SolidBrush(Color.Black);
+                        if (cmbColore.SelectedIndex == 0)
+                        {
+                            b = new SolidBrush(Color.Blue);
+                        }
+                        else if (cmbColore.SelectedIndex == 1)
+                        {
+                            b = new SolidBrush(Color.Yellow);
+                        }
+                        else if (cmbColore.SelectedIndex == 2)
+                        {
+                            b = new SolidBrush(Color.Red);
+                        }
+                        else if (cmbColore.SelectedIndex == 3)
+                        {
+                            b = new SolidBrush(Color.Green);
+                        }
+                        else if (cmbColore.SelectedIndex == 4)
+                        {
+                            b = new SolidBrush(Color.Orange);
+                        }
+                        else if (cmbColore.SelectedIndex == 5)
+                        {
+                            b = new SolidBrush(Color.White);
+                        }
+                        else if (cmbColore.SelectedIndex == 6)
+                        {
+                            b = new SolidBrush(Color.Pink);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Inserire un colore!!!");
+                            return;
+                        }
+                        p[contatore - 1] = new Pianeti(massa, spostamento, velocita, b, nome);
+                        listBox1.Items.Add(nome);
+                        txtMassa.Clear();
+                        txtSpostamento.Clear();
+                        txtVelocita.Clear();
+                        txtNome.Clear();
+                        cmbColore.SelectedIndex = -1;
+                        txtProva.Text = p[contatore - 1].ToString();
+                        
+                    }
+                }
+            }   
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            
             listBox1.Hide();
             label1.Hide();
             label2.Hide();
@@ -92,6 +116,8 @@ namespace planetario_definitivo
             btnPlay.Hide();
             btnRimuovi.Hide();
             cmbColore.Hide();
+
+            
             
         }
 
