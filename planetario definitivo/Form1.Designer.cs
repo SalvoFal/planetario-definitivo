@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.cmbColore = new System.Windows.Forms.ComboBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblStart = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // listBox1
@@ -206,6 +208,11 @@
             this.lblStart.TabIndex = 14;
             this.lblStart.Text = "Click to start";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,6 +259,7 @@
         private System.Windows.Forms.ComboBox cmbColore;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblStart;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

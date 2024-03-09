@@ -24,7 +24,12 @@ namespace planetario_definitivo
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.Black;
-
+            btnStart.Width = ClientSize.Width;
+            btnStart.Height = ClientSize.Height;
+        }
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            Refresh();
         }
         int contatore = 0;
         Pianeti[] p = new Pianeti[10000000];
@@ -108,5 +113,9 @@ namespace planetario_definitivo
             lblStart.Hide();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Refresh();
+        }
     }
 }
