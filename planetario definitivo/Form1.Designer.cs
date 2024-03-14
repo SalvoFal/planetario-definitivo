@@ -123,7 +123,7 @@
             this.btnRimuovi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRimuovi.BackgroundImage")));
             this.btnRimuovi.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnRimuovi.Location = new System.Drawing.Point(511, 96);
-            this.btnRimuovi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRimuovi.Margin = new System.Windows.Forms.Padding(4);
             this.btnRimuovi.Name = "btnRimuovi";
             this.btnRimuovi.Size = new System.Drawing.Size(100, 28);
             this.btnRimuovi.TabIndex = 6;
@@ -136,7 +136,7 @@
             this.btnPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.BackgroundImage")));
             this.btnPlay.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnPlay.Location = new System.Drawing.Point(511, 132);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(100, 28);
             this.btnPlay.TabIndex = 7;
@@ -149,7 +149,7 @@
             this.txtVelocita.BackColor = System.Drawing.Color.Navy;
             this.txtVelocita.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtVelocita.Location = new System.Drawing.Point(320, 30);
-            this.txtVelocita.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVelocita.Margin = new System.Windows.Forms.Padding(4);
             this.txtVelocita.Name = "txtVelocita";
             this.txtVelocita.Size = new System.Drawing.Size(132, 22);
             this.txtVelocita.TabIndex = 8;
@@ -159,7 +159,7 @@
             this.txtSpostamento.BackColor = System.Drawing.Color.Navy;
             this.txtSpostamento.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtSpostamento.Location = new System.Drawing.Point(320, 62);
-            this.txtSpostamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSpostamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtSpostamento.Name = "txtSpostamento";
             this.txtSpostamento.Size = new System.Drawing.Size(132, 22);
             this.txtSpostamento.TabIndex = 9;
@@ -169,7 +169,7 @@
             this.txtMassa.BackColor = System.Drawing.Color.Navy;
             this.txtMassa.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtMassa.Location = new System.Drawing.Point(320, 94);
-            this.txtMassa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMassa.Margin = new System.Windows.Forms.Padding(4);
             this.txtMassa.Name = "txtMassa";
             this.txtMassa.Size = new System.Drawing.Size(132, 22);
             this.txtMassa.TabIndex = 10;
@@ -179,7 +179,7 @@
             this.txtNome.BackColor = System.Drawing.Color.Navy;
             this.txtNome.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNome.Location = new System.Drawing.Point(320, 126);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(132, 22);
             this.txtNome.TabIndex = 11;
@@ -198,7 +198,7 @@
             "Bianco",
             "Rosa"});
             this.cmbColore.Location = new System.Drawing.Point(487, 30);
-            this.cmbColore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbColore.Margin = new System.Windows.Forms.Padding(4);
             this.cmbColore.Name = "cmbColore";
             this.cmbColore.Size = new System.Drawing.Size(160, 24);
             this.cmbColore.TabIndex = 12;
@@ -240,7 +240,7 @@
             this.txtProva.BackColor = System.Drawing.Color.Navy;
             this.txtProva.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtProva.Location = new System.Drawing.Point(320, 169);
-            this.txtProva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProva.Margin = new System.Windows.Forms.Padding(4);
             this.txtProva.Name = "txtProva";
             this.txtProva.Size = new System.Drawing.Size(132, 22);
             this.txtProva.TabIndex = 15;
@@ -249,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1596, 841);
+            this.ClientSize = new System.Drawing.Size(1640, 899);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.cmbColore);
@@ -266,7 +266,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.txtProva);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "PLANETARIO";
             this.Load += new System.EventHandler(this.Form1_Load);

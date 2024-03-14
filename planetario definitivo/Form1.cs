@@ -15,11 +15,13 @@ namespace planetario_definitivo
 {
     public partial class Form1 : Form
     {
+        Planetario.Planetario planetario = new Planetario.Planetario();
+
         public Form1()
         {
             InitializeComponent();
-            Graphics g = this.CreateGraphics();
         }
+        
         
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,11 +29,11 @@ namespace planetario_definitivo
             btnStart.Height = ClientSize.Height; 
             btnStart.Width = ClientSize.Width;
         }
-        int contatore = 0;
-        Pianeti[] p = new Pianeti[10000000];
+
+        
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
-            contatore++;
+
             if (!Vettore.TryParse(txtSpostamento.Text, out Vettore spostamento) == true)
             {
                 MessageBox.Show("bisogna inserire un vettore");
@@ -86,14 +88,15 @@ namespace planetario_definitivo
                             MessageBox.Show("Inserire un colore!!!");
                             return;
                         }
-                        p[contatore - 1] = new Pianeti(massa, spostamento, velocita, b, nome);
+                        
                         listBox1.Items.Add(nome);
                         txtMassa.Clear();
                         txtSpostamento.Clear();
                         txtVelocita.Clear();
                         txtNome.Clear();
                         cmbColore.SelectedIndex = -1;
-                        txtProva.Text = p[contatore - 1].ToString();
+                        planetario.Pianeti.Add(new Pianeta(massa, spostamento, velocita, b, nome));
+
                         
                     }
                 }
@@ -133,6 +136,19 @@ namespace planetario_definitivo
             lblStart.Hide();
         }
 
-        
+        public void StampaPlanetario(Graphics g)
+        {
+            var g = this.CreateGraphics();
+            foreach (Pianeta pianeta in planetario.Pianeti)
+            {
+                DisegnaPianeti(g, p);
+            }
+        }
+
+        public void DisegnaPianeti(Graphics g, Pianeta p)
+        {
+            g.FillEllipse(p.Brush, (float)p.Spostamento.X, (float)p.Spostamento.Y, 7, 7);
+        }
+
     }
 }
