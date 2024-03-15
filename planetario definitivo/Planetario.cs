@@ -32,6 +32,7 @@ namespace Planetario
                     }
                 }
                 p.Accelerazione = p.Forza / p.Massa;
+                p.Spostamento += p.Spostamento + p.Velocita * 0.001...;
                 p.Velocita += p.Velocita * 0.001;
             }
             
