@@ -26,7 +26,8 @@ namespace planetario_definitivo
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.Black;
-
+            btnStartStop.Hide();
+            btnExit.Hide();
             timer.Enabled = true;
         }
 
@@ -121,7 +122,8 @@ namespace planetario_definitivo
             cmbColore.Hide();
 
             StampaPlanetario();
-
+            btnExit.Visible = true;
+            btnStartStop.Visible = true;
 
             
             
@@ -154,7 +156,46 @@ namespace planetario_definitivo
         {
             btnStart.Height = ClientSize.Height;
             btnStart.Width = ClientSize.Width;
-           
+            lblStart.Location = new Point((ClientSize.Width - lblStart.Width) / 2, ClientSize.Height - 50);
+            btnExit.Location = new Point(50, 20);
+            btnStartStop.Location = new Point(ClientSize.Width - btnStartStop.Width - 50, 20);
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            btnExit.Hide();
+            btnStartStop.Hide();
+            listBox1.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            txtMassa.Visible = true;
+            txtSpostamento.Visible = true;
+            txtVelocita.Visible = true;
+            txtNome.Visible = true;
+            btnAggiungi.Visible = true;
+            btnPlay.Visible = true;
+            btnRimuovi.Visible = true;
+            cmbColore.Visible = true;
+        }
+        int contatore = 0;
+        private void btnStartStop_Click(object sender, EventArgs e)
+        {
+            contatore++;
+            if(contatore % 2 == 1)
+            {
+                btnStartStop.Text = "START";
+                timer.Stop();
+            }
+            else
+            {
+                btnStartStop.Text = "STOP";
+                timer.Start();
+            }
+              
+        }
+
+
     }
 }

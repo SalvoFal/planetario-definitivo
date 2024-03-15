@@ -46,6 +46,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lblStart = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnStartStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -209,7 +211,7 @@
             this.btnStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStart.BackgroundImage")));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.8F);
             this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStart.Location = new System.Drawing.Point(1, 1);
+            this.btnStart.Location = new System.Drawing.Point(3, 3);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(995, 530);
@@ -235,11 +237,33 @@
             this.timer.Interval = 1;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(16, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 15;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnStartStop
+            // 
+            this.btnStartStop.Location = new System.Drawing.Point(1207, 12);
+            this.btnStartStop.Name = "btnStartStop";
+            this.btnStartStop.Size = new System.Drawing.Size(132, 23);
+            this.btnStartStop.TabIndex = 16;
+            this.btnStartStop.Text = "STOP";
+            this.btnStartStop.UseVisualStyleBackColor = true;
+            this.btnStartStop.Click += new System.EventHandler(this.btnStartStop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1640, 899);
+            this.Controls.Add(this.btnStartStop);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.cmbColore);
@@ -282,6 +306,8 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblStart;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnStartStop;
     }
 }
 
