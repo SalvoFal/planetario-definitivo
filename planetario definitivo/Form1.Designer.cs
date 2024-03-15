@@ -45,8 +45,7 @@
             this.cmbColore = new System.Windows.Forms.ComboBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblStart = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtProva = new System.Windows.Forms.TextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // listBox1
@@ -210,7 +209,7 @@
             this.btnStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStart.BackgroundImage")));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.8F);
             this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStart.Location = new System.Drawing.Point(0, 1);
+            this.btnStart.Location = new System.Drawing.Point(1, 1);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(995, 530);
@@ -231,19 +230,10 @@
             this.lblStart.TabIndex = 14;
             this.lblStart.Text = "Click to start";
             // 
-            // timer1
+            // timer
             // 
-            this.timer1.Interval = 1;
-            // 
-            // txtProva
-            // 
-            this.txtProva.BackColor = System.Drawing.Color.Navy;
-            this.txtProva.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtProva.Location = new System.Drawing.Point(320, 169);
-            this.txtProva.Margin = new System.Windows.Forms.Padding(4);
-            this.txtProva.Name = "txtProva";
-            this.txtProva.Size = new System.Drawing.Size(132, 22);
-            this.txtProva.TabIndex = 15;
+            this.timer.Interval = 1;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Form1
             // 
@@ -265,7 +255,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.txtProva);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "PLANETARIO";
@@ -292,8 +281,7 @@
         private System.Windows.Forms.ComboBox cmbColore;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblStart;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox txtProva;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

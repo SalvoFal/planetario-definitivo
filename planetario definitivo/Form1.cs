@@ -26,8 +26,8 @@ namespace planetario_definitivo
         private void Form1_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.Black;
-            btnStart.Height = ClientSize.Height; 
-            btnStart.Width = ClientSize.Width;
+
+            timer.Enabled = true;
         }
 
         
@@ -120,6 +120,9 @@ namespace planetario_definitivo
             btnRimuovi.Hide();
             cmbColore.Hide();
 
+            StampaPlanetario();
+
+
             
             
         }
@@ -136,19 +139,22 @@ namespace planetario_definitivo
             lblStart.Hide();
         }
 
-        public void StampaPlanetario(Graphics g)
+        public void StampaPlanetario()
         {
-            var g = this.CreateGraphics();
+            Graphics graphics = this.CreateGraphics();
             foreach (Pianeta pianeta in planetario.Pianeti)
             {
-                DisegnaPianeti(g, p);
+                graphics.FillEllipse(pianeta.Brush, (float)pianeta.Spostamento.X, (float)pianeta.Spostamento.Y, 104, 104);
             }
         }
 
-        public void DisegnaPianeti(Graphics g, Pianeta p)
-        {
-            g.FillEllipse(p.Brush, (float)p.Spostamento.X, (float)p.Spostamento.Y, 7, 7);
-        }
+        
 
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            btnStart.Height = ClientSize.Height;
+            btnStart.Width = ClientSize.Width;
+           
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace Planetario
         public Vettore Velocita { get; set; }
         public SolidBrush Brush { get; set; }
         public string Nome { get; set; }
+        public Vettore Forza { get; set; }
+        public Vettore Accelerazione { get; set; }
         public Pianeta(double massa, Vettore spostamento, Vettore velocita, SolidBrush brush, string nome)
         {
             Massa = massa;
