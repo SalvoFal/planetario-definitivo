@@ -136,6 +136,7 @@ namespace planetario_definitivo
             StampaPlanetario();
             btnExit.Visible = true;
             btnStartStop.Visible = true;
+            timer.Enabled = true;
 
             
             
@@ -151,6 +152,7 @@ namespace planetario_definitivo
         {
             btnStart.Hide();
             lblStart.Hide();
+            timer.Enabled = false;
         }
 
         public void StampaPlanetario()
@@ -178,6 +180,7 @@ namespace planetario_definitivo
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Graphics graphics = this.CreateGraphics();
             btnExit.Hide();
             btnStartStop.Hide();
             listBox1.Visible = true;
@@ -193,9 +196,15 @@ namespace planetario_definitivo
             btnPlay.Visible = true;
             btnRimuovi.Visible = true;
             cmbColore.Visible = true;
+
+            timer.Enabled= false;
             
-            
-            
+            listBox1.Items.Clear();
+            planetario.Pianeti = new List<Pianeta>();
+            graphics.Clear(Color.Black);
+
+                               
+                        
         }
         int contatore = 0;
         private void btnStartStop_Click(object sender, EventArgs e)

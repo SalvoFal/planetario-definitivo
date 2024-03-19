@@ -25,14 +25,15 @@ namespace Planetario
             {
                 foreach (Pianeta p1 in Pianeti)
                 {
+                    p.Forza = new Vettore(0, 0);
                     if (p != p1)
                     {
                         Vettore distanza = p1.Spostamento - p.Spostamento;
                         p.Forza += (G * p.Massa * p1.Massa) / (distanza * distanza) * (distanza / distanza.Modulo());
                     }
                 }
-                p.Accelerazione = p.Forza / p.Massa;
-                p.Spostamento += p.Spostamento + p.Velocita * 0.001 + 0.5 * 0.001 * 0.001 * p.Accelerazione;
+                p.Accelerazione = p.Forza / (double)p.Massa;
+                p.Spostamento +=  p.Velocita * 0.001 + 0.5 * 0.001 * 0.001 * p.Accelerazione;
                 p.Velocita += p.Accelerazione * 0.001;
                 
             }
