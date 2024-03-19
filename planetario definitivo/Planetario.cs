@@ -27,13 +27,14 @@ namespace Planetario
                 {
                     if (p != p1)
                     {
-                        Vettore raggio = p1.Spostamento - p.Spostamento;
-                        p.Forza += (G * p.Massa * p1.Massa) / (raggio * raggio) * (raggio / raggio.Modulo());
+                        Vettore distanza = p1.Spostamento - p.Spostamento;
+                        p.Forza += (G * p.Massa * p1.Massa) / (distanza * distanza) * (distanza / distanza.Modulo());
                     }
                 }
                 p.Accelerazione = p.Forza / p.Massa;
                 p.Spostamento += p.Spostamento + p.Velocita * 0.001 + 0.5 * 0.001 * 0.001 * p.Accelerazione;
                 p.Velocita += p.Accelerazione * 0.001;
+                
             }
             
         }

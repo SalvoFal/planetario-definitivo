@@ -18,14 +18,15 @@ namespace Planetario
         public string Nome { get; set; }
         public Vettore Forza { get; set; }
         public Vettore Accelerazione { get; set; }
-        public Pianeta(double massa, Vettore spostamento, Vettore velocita, SolidBrush brush, string nome)
+        public double Raggio { get; set; }
+        public Pianeta(double massa, Vettore spostamento, Vettore velocita, SolidBrush brush, string nome, double raggio)
         {
             Massa = massa;
             Spostamento = spostamento;
             Velocita = velocita;
             Brush = brush;
             Nome = nome;
-
+            Raggio = raggio;
         }
 
         public override string ToString()

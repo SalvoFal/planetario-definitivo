@@ -54,51 +54,60 @@ namespace planetario_definitivo
                     }
                     else
                     {
+                        if (!double.TryParse(txtRaggio.Text, out double raggio) == true)
+                        {
+                            MessageBox.Show("bisogna inserire un valore numerico");
+                        }
 
-                        SolidBrush b = new SolidBrush(Color.Black);
-                        if (cmbColore.SelectedIndex == 0)
-                        {
-                            b = new SolidBrush(Color.Blue);
-                        }
-                        else if (cmbColore.SelectedIndex == 1)
-                        {
-                            b = new SolidBrush(Color.Yellow);
-                        }
-                        else if (cmbColore.SelectedIndex == 2)
-                        {
-                            b = new SolidBrush(Color.Red);
-                        }
-                        else if (cmbColore.SelectedIndex == 3)
-                        {
-                            b = new SolidBrush(Color.Green);
-                        }
-                        else if (cmbColore.SelectedIndex == 4)
-                        {
-                            b = new SolidBrush(Color.Orange);
-                        }
-                        else if (cmbColore.SelectedIndex == 5)
-                        {
-                            b = new SolidBrush(Color.White);
-                        }
-                        else if (cmbColore.SelectedIndex == 6)
-                        {
-                            b = new SolidBrush(Color.Pink);
-                        }
+
                         else
                         {
-                            MessageBox.Show("Inserire un colore!!!");
-                            return;
-                        }
-                        
-                        listBox1.Items.Add(nome);
-                        txtMassa.Clear();
-                        txtSpostamento.Clear();
-                        txtVelocita.Clear();
-                        txtNome.Clear();
-                        cmbColore.SelectedIndex = -1;
-                        planetario.Pianeti.Add(new Pianeta(massa, spostamento, velocita, b, nome));
 
-                        
+                            SolidBrush b = new SolidBrush(Color.Black);
+                            if (cmbColore.SelectedIndex == 0)
+                            {
+                                b = new SolidBrush(Color.Blue);
+                            }
+                            else if (cmbColore.SelectedIndex == 1)
+                            {
+                                b = new SolidBrush(Color.Yellow);
+                            }
+                            else if (cmbColore.SelectedIndex == 2)
+                            {
+                                b = new SolidBrush(Color.Red);
+                            }
+                            else if (cmbColore.SelectedIndex == 3)
+                            {
+                                b = new SolidBrush(Color.Green);
+                            }
+                            else if (cmbColore.SelectedIndex == 4)
+                            {
+                                b = new SolidBrush(Color.Orange);
+                            }
+                            else if (cmbColore.SelectedIndex == 5)
+                            {
+                                b = new SolidBrush(Color.White);
+                            }
+                            else if (cmbColore.SelectedIndex == 6)
+                            {
+                                b = new SolidBrush(Color.Pink);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Inserire un colore!!!");
+                                return;
+                            }
+
+                            listBox1.Items.Add(nome);
+                            txtMassa.Clear();
+                            txtSpostamento.Clear();
+                            txtVelocita.Clear();
+                            txtNome.Clear();
+                            txtRaggio.Clear();
+                            cmbColore.SelectedIndex = -1;
+                            planetario.Pianeti.Add(new Pianeta(massa, spostamento, velocita, b, nome, raggio));
+
+                        }
                     }
                 }
             }   
@@ -112,6 +121,7 @@ namespace planetario_definitivo
             label2.Hide();
             label3.Hide();
             label4.Hide();
+            lblRaggio.Hide();
             txtMassa.Hide();
             txtSpostamento.Hide();
             txtVelocita.Hide();
@@ -120,6 +130,8 @@ namespace planetario_definitivo
             btnPlay.Hide();
             btnRimuovi.Hide();
             cmbColore.Hide();
+            txtRaggio.Hide();
+            
 
             StampaPlanetario();
             btnExit.Visible = true;
@@ -146,7 +158,7 @@ namespace planetario_definitivo
             Graphics graphics = this.CreateGraphics();
             foreach (Pianeta pianeta in planetario.Pianeti)
             {
-                graphics.FillEllipse(pianeta.Brush, (float)pianeta.Spostamento.X, (float)pianeta.Spostamento.Y, 104, 104);
+                graphics.FillEllipse(pianeta.Brush, (float)pianeta.Spostamento.X, (float)pianeta.Spostamento.Y, (float)pianeta.Raggio, (float)pianeta.Raggio);
             }
         }
 
@@ -154,11 +166,14 @@ namespace planetario_definitivo
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            Refresh();
             btnStart.Height = ClientSize.Height;
             btnStart.Width = ClientSize.Width;
             lblStart.Location = new Point((ClientSize.Width - lblStart.Width) / 2, ClientSize.Height - 50);
             btnExit.Location = new Point(50, 20);
             btnStartStop.Location = new Point(ClientSize.Width - btnStartStop.Width - 50, 20);
+            planetario.Move();
+            StampaPlanetario();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -178,6 +193,9 @@ namespace planetario_definitivo
             btnPlay.Visible = true;
             btnRimuovi.Visible = true;
             cmbColore.Visible = true;
+            
+            
+            
         }
         int contatore = 0;
         private void btnStartStop_Click(object sender, EventArgs e)
