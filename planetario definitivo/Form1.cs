@@ -30,7 +30,6 @@ namespace planetario_definitivo
             btnExit.Hide();
             timer.Enabled = true;
         }
-
         
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
@@ -255,6 +254,27 @@ namespace planetario_definitivo
                 planetario.Pianeti = new List<Pianeta>();
                 graphics.Clear(Color.Black);
             }
+        }
+
+        private void Form1_ClientSizeChanged(object sender, EventArgs e)
+        {
+            btnPlay.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            btnExit.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            label1.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            label2.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            label3.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            label4.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            txtMassa.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            txtSpostamento.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            txtVelocita.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            txtNome.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            txtRaggio.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            lblRaggio.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            btnAggiungi.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            btnStartStop.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            btnRimuovi.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            listBox1.Size = new Size(ClientSize.Width / 5, ClientSize.Height / 4);
+            cmbColore.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
         }
     }
 }
