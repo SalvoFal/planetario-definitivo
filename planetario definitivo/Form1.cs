@@ -225,56 +225,45 @@ namespace planetario_definitivo
               
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Escape)
-            {
-                Graphics graphics = this.CreateGraphics();
-                btnExit.Hide();
-                btnStartStop.Hide();
-                listBox1.Visible = true;
-                label1.Visible = true;
-                label2.Visible = true;
-                label3.Visible = true;
-                label4.Visible = true;
-                txtMassa.Visible = true;
-                txtRaggio.Visible = true;
-                lblRaggio.Visible = true;
-                txtSpostamento.Visible = true;
-                txtVelocita.Visible = true;
-                txtNome.Visible = true;
-                btnAggiungi.Visible = true;
-                btnPlay.Visible = true;
-                btnRimuovi.Visible = true;
-                cmbColore.Visible = true;
-
-                timer.Enabled = false;
-
-                listBox1.Items.Clear();
-                planetario.Pianeti = new List<Pianeta>();
-                graphics.Clear(Color.Black);
-            }
-        }
+        
 
         private void Form1_ClientSizeChanged(object sender, EventArgs e)
         {
-            btnPlay.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            btnExit.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            label1.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            label2.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            label3.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            label4.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            txtMassa.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            txtSpostamento.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            txtVelocita.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            txtNome.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            txtRaggio.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            lblRaggio.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            btnAggiungi.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            btnStartStop.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            btnRimuovi.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
-            listBox1.Size = new Size(ClientSize.Width / 5, ClientSize.Height / 4);
-            cmbColore.Size = new Size(ClientSize.Width / 12, ClientSize.Height / 24);
+            btnPlay.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            btnExit.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            label1.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            label2.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            label3.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            label4.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            txtMassa.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            txtSpostamento.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            txtVelocita.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            txtNome.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            txtRaggio.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            lblRaggio.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            btnAggiungi.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            btnStartStop.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            btnRimuovi.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            listBox1.Size = new Size(ClientSize.Width / 3, ClientSize.Height / 2);
+            cmbColore.Size = new Size(ClientSize.Width / 7, ClientSize.Height / 10);
+            listBox1.Location = new Point(50,50);
+            label1.Location = new Point(50 + listBox1.Width + 20, 50);
+            label2.Location = new Point(50 + listBox1.Width + 20, 100);
+            label3.Location = new Point(50 + listBox1.Width + 20, 150);
+            label4.Location = new Point(50 + listBox1.Width + 20, 200);
+            lblRaggio.Location = new Point(50 + listBox1.Width + 20, 250);
+            txtMassa.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40, 50);
+            txtSpostamento.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40, 100);
+            txtVelocita.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40, 150);
+            txtNome.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40, 200);
+            txtRaggio.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40, 250);
+            cmbColore.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40 + txtMassa.Width + 40, 50);
+            btnAggiungi.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40 + txtMassa.Width + 40, 100);
+            btnRimuovi.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40 + txtMassa.Width + 40, 180);
+            btnPlay.Location = new Point(50 + listBox1.Width + 20 + label1.Width + 40 + txtMassa.Width + 40, 260);
+
         }
+
+        
     }
 }
