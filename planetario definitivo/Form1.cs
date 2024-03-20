@@ -145,6 +145,7 @@ namespace planetario_definitivo
         private void btnRimuovi_Click(object sender, EventArgs e)
         {
             listBox1.Items.Remove(listBox1.SelectedItem);
+            planetario.Pianeti.RemoveAt(listBox1.SelectedIndex + 1);
      
         }
 
@@ -160,7 +161,7 @@ namespace planetario_definitivo
             Graphics graphics = this.CreateGraphics();
             foreach (Pianeta pianeta in planetario.Pianeti)
             {
-                graphics.FillEllipse(pianeta.Brush, (float)pianeta.Spostamento.X, (float)pianeta.Spostamento.Y, (float)pianeta.Raggio, (float)pianeta.Raggio);
+                graphics.FillEllipse(pianeta.Brush, (float)(pianeta.Spostamento.X/1e9), (float)(pianeta.Spostamento.Y/1e9), (float)pianeta.Raggio, (float)pianeta.Raggio);
             }
         }
 
@@ -192,6 +193,8 @@ namespace planetario_definitivo
             txtSpostamento.Visible = true;
             txtVelocita.Visible = true;
             txtNome.Visible = true;
+            txtRaggio.Visible = true;
+            lblRaggio.Visible = true;
             btnAggiungi.Visible = true;
             btnPlay.Visible = true;
             btnRimuovi.Visible = true;
@@ -223,6 +226,35 @@ namespace planetario_definitivo
               
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                Graphics graphics = this.CreateGraphics();
+                btnExit.Hide();
+                btnStartStop.Hide();
+                listBox1.Visible = true;
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                txtMassa.Visible = true;
+                txtRaggio.Visible = true;
+                lblRaggio.Visible = true;
+                txtSpostamento.Visible = true;
+                txtVelocita.Visible = true;
+                txtNome.Visible = true;
+                btnAggiungi.Visible = true;
+                btnPlay.Visible = true;
+                btnRimuovi.Visible = true;
+                cmbColore.Visible = true;
 
+                timer.Enabled = false;
+
+                listBox1.Items.Clear();
+                planetario.Pianeti = new List<Pianeta>();
+                graphics.Clear(Color.Black);
+            }
+        }
     }
 }
