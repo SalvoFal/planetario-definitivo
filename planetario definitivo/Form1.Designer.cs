@@ -213,7 +213,7 @@
             this.btnStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStart.BackgroundImage")));
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.8F);
             this.btnStart.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnStart.Location = new System.Drawing.Point(1, 2);
+            this.btnStart.Location = new System.Drawing.Point(0, 2);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(995, 530);
@@ -221,6 +221,7 @@
             this.btnStart.Text = "PLANETARIO";
             this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnStart.Paint += new System.Windows.Forms.PaintEventHandler(this.btnStart_Paint);
             // 
             // lblStart
             // 
@@ -287,10 +288,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1640, 898);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnStartStop);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblStart);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.cmbColore);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtMassa);
